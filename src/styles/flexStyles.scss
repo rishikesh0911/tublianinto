@@ -22,6 +22,9 @@ display:flex
 .width55{
     width:45%;
 }
+.width25{
+    width:25%;
+}
 .list-flex{
     display: flex;
     list-style: none;
@@ -35,4 +38,12 @@ display:flex
     background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
     display: inline; 
 }
-
+.unsel-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.unsel-list li{
+    margin-right: 10px;
+    display: inline;
+}
