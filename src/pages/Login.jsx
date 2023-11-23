@@ -29,7 +29,7 @@ const handleUserNames=(e)=>{
     <div className='width50'>
     <img src={siteBanner} alt="logo-banner" className="banner-left"/>
     </div>
-    <div className='width50'>
+    <div className='width50' style={{padding:"2rem"}}>
   <div className='display flexRow'>
 <img src={logo} alt="logo" className="images-login"/>
 <TopNavigation pageNo={"1"}/>
@@ -37,7 +37,7 @@ const handleUserNames=(e)=>{
   <div className='display flexCol width55 margTop40'>
     <div className='marginLeft12'>
         <h1 className='highlight'>Get Started</h1>
-        <h4>Start recruiting Streetcred developers,Today!!</h4>
+        <p style={{whiteSpace:'nowrap'}}>Start recruiting Streetcred developers,Today!!</p>
     </div>
     <input
     value={entryUser.firstName}

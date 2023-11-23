@@ -36,7 +36,7 @@ const handleUserNames=(e)=>{
     {/* <img src={siteBanner} alt="logo-banner" className="banner-left"/> */}
     create Account banner
     </div>
-    <div className='width50'>
+    <div className='width50'  style={{padding:"2rem"}}>
     <div className='display flexRow'>
     <img src={logo} alt="logo" className="images-login"/>
     <TopNavigation pageNo={"2"}/>
@@ -65,7 +65,7 @@ const handleUserNames=(e)=>{
         </div>)
        })}
         </div>
-    <button className='login-button marginLeft12'>Create Account</button>
+    <button className='login-button marginLeft12' onClick={()=>{navigate("./setup")}}>Create Account</button>
     <div className='flexRow display marginLeft28'>
     <div className='line'></div><span className='marginTop23'>Or</span><div className='marginLeft12 line'></div>
     </div>
@@ -78,6 +78,7 @@ const handleUserNames=(e)=>{
        <h4>Already have an account?</h4><a href="#" className='marginTop23 marginLeft12 highlight'>Login</a> 
         </div>
         <Footer/>
+       
     </div>
 
     </div>

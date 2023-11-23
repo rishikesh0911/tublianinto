@@ -13,6 +13,13 @@ display:flex
 .justContStart{
     justify-content: flex-start;
 }
+.justContEnd{
+    justify-content: flex-end;
+}
+.justContSpcBtwn{
+    justify-content: space-between;
+}
+
 .alignCenter{
     align-items: center;
 }
@@ -21,6 +28,9 @@ display:flex
 }
 .width55{
     width:45%;
+}
+.width62{
+    width:62%;
 }
 .width25{
     width:25%;
@@ -46,4 +56,17 @@ display:flex
 .unsel-list li{
     margin-right: 10px;
     display: inline;
+}
+.payment-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.payment-list li{
+   width:229px;
+    height:10px;
+    font-size: 14px;
+
+    color: #FEFEFE;
 }

@@ -13,8 +13,8 @@ function App() {
     <Routes>
     <Route path="/*" element={<Login />} />
     <Route path="/create" element={<CreateAccount />} />
-    <Route path="/account" element={<AccountSetup />} />
-    <Route path="/payment" element={<Payment />} />
+    <Route path="/create/setup" element={<AccountSetup />} />
+    <Route path="/create/setup/payment" element={<Payment />} />
     </Routes>
     </UserDetailsProvider>
     </Router>

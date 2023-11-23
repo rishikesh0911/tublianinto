@@ -12,10 +12,10 @@ const Navigation = () => {
           <Link to="/create">Create Account</Link>
         </li>
         <li>
-          <Link to="/account">Account Setup</Link>
+          <Link to="/create/setup">Account Setup</Link>
         </li>
         <li>
-          <Link to="/payment">Payment</Link>
+          <Link to="/create/payment">Payment</Link>
         </li>
       </ul>
     </nav>

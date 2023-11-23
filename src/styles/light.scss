@@ -7,14 +7,125 @@ body {
 .container {
     width: 100%; 
     height: 100vh;
+    padding: auto;
     background-color: black;
     color: #B7B7B7;
     margin: 0 auto; 
-    padding: 20px;
     box-sizing: border-box;
 }
 .highlight{
    color: #FEFEFE
+}
+.select-cards{
+  width:250px;
+  position: relative;
+  height:388px;
+  border-radius: 20px;
+  margin-right: 2rem;
+  padding: 0.6rem;
+  border: 1px solid;
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E),
+   linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+  // border-image-source: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+
+}
+.select-period{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+background-color: #333;
+padding: 3px;
+  width: 230px;
+height: 48px;
+ border-radius: 10px;
+border: 1px solid #333;
+}
+
+.monthly-plan{
+  width: 128px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  color: transparent;
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+  padding: 1px;
+  border-radius: 10px;
+  color: #FEFEFE;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+.anually-plan{
+  @extend .monthly-plan;
+  background-image:none
+
+}
+.discount-plan{
+  background: #445742;
+  width: 57px;
+  height:24px;
+  padding: 4px 6px 4px 6px;
+  border-radius: 33px
+  
+}
+.plan-button-custom{
+  @extend .plan-button;
+  color: #FEFEFE;
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
+.plan-mode1{
+background-image: linear-gradient(180deg, #855FEF 0%, #5435AA 100%);
+color: #FEFEFE;
+border: 1px solid #B29BF3;
+width:auto;
+height:29px;
+left: 20px;
+font-size: 14px;
+font-weight: 500;
+padding: 3px, 20px, 3px, 20px;
+border-radius: 5px;
+}
+
+.plan-mode2{
+  @extend .plan-mode1;
+  background-image: linear-gradient(180deg, #0881FF 0%, #0B4F95 100%);
+
+  
+  border: 1px solid #79BBFF;
+  
+  }
+  .plan-mode3{
+    @extend .plan-mode1;
+    background-image: linear-gradient(180deg, #068092 0%, #043B43 100%);
+    border: 1px solid #22BFD6;
+    }
+    
+
+.disc-text{
+color: #76F368;
+width: 45px;
+height: 16px;
+font-size: 12px;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+}
+.plan-head{
+color:#FEFEFE;
+font-weight: 700;
+font-size: 30px;
+}
+.plan-month{
+  color:#B7B7B7;
+  font-weight: 500;
+  font-size: 15px;
 }
 .images-login{
     width: 90px;
@@ -22,10 +133,31 @@ body {
    margin: 15px 10px 0px 0px;
 
 }
+.check-circle {
+  position: relative;
+  width: 21px; /* Adjust the size of the circle */
+  height: 21px; /* Adjust the size of the circle */
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color:#76F368;;
+  border: 2px solid #76F368; /* Color of the circle border */
+}
+
+.check-circle::before {
+  content: '\2713'; /* Unicode character for a checkmark */
+  font-size: 16px; /* Adjust the size of the checkmark */
+  color: #333; /* Color of the checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
 .banner-left{
-    width: 710px;
-   margin: 13rem 0rem 0rem 0rem;
-    height: 800px;
+  width: 100%;
+  height: 100vh;
 }
 .signup-check{
         width: 14px;
@@ -38,9 +170,30 @@ body {
     height: 24px;
 }
 .footer{
-    margin-top: 63%;
+    bottom:0;
     margin-left: 0px;
+    position: fixed;
+    padding: 15px;
 }
+.acc-desc{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+.team-prex{
+  width:198px;
+  height: 116px;
+  top:46px;
+  left:26px;
+}
+.footer-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+}
+
 .user-name {
     background-clip: text;
     color: transparent;
@@ -103,6 +256,19 @@ input {
   cursor: pointer; 
   outline: none;
   }
+  .payment-next{
+    @extend .login-button;
+    margin-top: 5rem;
+  }
+  .plan-button{
+  @extend .login-button;
+  width: 261px;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  padding: 8px, 16px, 8px, 16px;
+  border-radius: 30px;
+  }
 
   .google-sign {
     background-color: #000000;
@@ -118,3 +284,45 @@ input {
 border: 1px solid white
 
   }
+
+  /* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkbox */
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px; /* Adjust the spacing between the checkbox and the label */
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+input[type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Set the width of the checkbox */
+  height: 20px; /* Set the height of the checkbox */
+  border: 1px solid #333; /* Set the border color */
+  background: linear-gradient(0deg, #1E1E1E, #1E1E1E);
+  border-radius: 50%; /* Make it rounded */
+}
+
+/* Style the custom checkbox when checked */
+input[type="checkbox"]:checked + label::before {
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: '\2713'; /* Unicode character for a checkmark */
+  position: absolute;
+  top: 12px;
+  left:12px;
+  transform: translate(-50%, -50%);
+  font-size: 14px; /* Adjust the size of the tick */
+  color: #333
+}
