@@ -2,6 +2,9 @@ import React,{useState,useEffect} from 'react';
 import '../styles/light.scss';
 import logo from "../assets/logo.png";
 import google from "../assets/icons/go1.png";
+import Safari from "../assets/Safari.png";
+import d1 from "../assets/icons/d1.png";
+import d2 from "../assets/icons/d2.png";
 import check from "../assets/icons/tick-circle.png";
 import { snp,loginCriteria } from '../configs/signupstage';
 import TopNavigation from '../common/topNavigate';
@@ -15,6 +18,7 @@ import Footer from '../common/footer';
 const CreateAccount=()=>{
  const {updateUserCredentials,user}=useUserContext();
  const navigate = useNavigate();
+ const url = window.location.href;
 
 const [credentials,setCredentials]=useState({email:"",password:""});
 const [userName,setUserName]=useState({});
@@ -32,14 +36,17 @@ const handleUserNames=(e)=>{
 }
     return(<div className='container'>
     <div className='display'>
-    <div className='width50'>
-    {/* <img src={siteBanner} alt="logo-banner" className="banner-left"/> */}
-    create Account banner
+    <div className='width50 banner-create-account'>
+    <img src={d1} alt="user-prof" className="d1"/> 
+    <div className='display flexRow justContCenter alignCenter' style={{height:'80vh'}}>
+    <img src={Safari} alt="user-prof" className="user-profile"/> 
+    </div>
+    <img src={d2} alt="user-prof" className="d2"/> 
     </div>
     <div className='width50'  style={{padding:"2rem"}}>
     <div className='display flexRow'>
     <img src={logo} alt="logo" className="images-login"/>
-    <TopNavigation pageNo={"2"}/>
+    <TopNavigation lookUp={url}/>
     </div>
   <div className='display flexCol width55 margTop40'>
     <div className='marginLeft12'>
@@ -70,7 +77,7 @@ const handleUserNames=(e)=>{
     <div className='line'></div><span className='marginTop23'>Or</span><div className='marginLeft12 line'></div>
     </div>
 
-    <button className='google-sign flexRow display justContCenter alignCenter marginLeft18'><span> <img src={google} alt="google" className="google-logo"/> </span>Sign up with Google</button>
+    <button className='google-sign flexRow display justContCenter alignCenter marginLeft12'><span> <img src={google} alt="google" className="google-logo"/> </span>Sign up with Google</button>
     
     </div>
 

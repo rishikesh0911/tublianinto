@@ -9,13 +9,14 @@ import PaymentCards from '../common/paymentCards';
 
 const AccountSetup=()=>{
  const navigate = useNavigate();
+ const url = window.location.href;
 
 return(<div className='container' >
     <div className='display flexRow' style={{padding:"2rem"}}>
     <img src={logo} alt="logo" className="images-login"/>
     <div className='width62'></div>
     <div className='display justContEnd'>
-    <TopNavigation pageNo={"3"}/>
+    <TopNavigation lookUp={url}/>
     </div>
     </div>
     <div className='display justContCenter alignCenter marginTop23'>

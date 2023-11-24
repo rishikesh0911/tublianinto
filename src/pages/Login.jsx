@@ -14,7 +14,7 @@ import Footer from '../common/footer';
 const Login=()=>{
  const {updateUserCredentials}=useUserContext();
  const navigate = useNavigate();
-
+ const url = window.location.href;
 const [entryUser,setEntryUser]=useState({firstName:"",lastName:""});
 useEffect(() => {
     updateUserCredentials(entryUser);
@@ -32,7 +32,7 @@ const handleUserNames=(e)=>{
     <div className='width50' style={{padding:"2rem"}}>
   <div className='display flexRow'>
 <img src={logo} alt="logo" className="images-login"/>
-<TopNavigation pageNo={"1"}/>
+<TopNavigation lookUp={url}/>
   </div>
   <div className='display flexCol width55 margTop40'>
     <div className='marginLeft12'>

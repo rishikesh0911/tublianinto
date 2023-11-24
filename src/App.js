@@ -1,4 +1,4 @@
-import Login from './pages/Login';
+import Login from './pages/login';
 import CreateAccount from './pages/createAccount';
 import Payment from './pages/payment';
 import AccountSetup from './pages/accountSetup';
@@ -11,10 +11,10 @@ function App() {
     <Router>
     <UserDetailsProvider>
     <Routes>
-    <Route path="/*" element={<Login />} />
-    <Route path="/create" element={<CreateAccount />} />
-    <Route path="/create/setup" element={<AccountSetup />} />
-    <Route path="/create/setup/payment" element={<Payment />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="login/create" element={<CreateAccount />} />
+    <Route path="login/create/setup" element={<AccountSetup />} />
+    <Route path="login/create/setup/payment" element={<Payment />} />
     </Routes>
     </UserDetailsProvider>
     </Router>
