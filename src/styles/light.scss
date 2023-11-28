@@ -5,12 +5,12 @@ body {
 }
 
 .container {
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     padding: auto;
     background-color: black;
     color: #B7B7B7;
-    margin: 0 auto; 
+    margin: 0 auto;
     box-sizing: border-box;
 }
 .highlight{
@@ -24,7 +24,7 @@ body {
   border-radius: 20px;
   margin-right: 2rem;
   padding: 0.6rem;
-  border: 1px solid;
+  border: 1px solid #292929;
   background: linear-gradient(0deg, #1E1E1E, #1E1E1E),
 }
 .select-cards-checked{
@@ -34,7 +34,8 @@ body {
   border-radius: 20px;
   margin-right: 2rem;
   padding: 0.6rem;
-  border: 1px solid orange;
+
+  box-shadow: 0 0 0 0.4px #FBDA61, 0 0 0 .83px rgba(255, 90, 205, 0.84);
   background: linear-gradient(0deg, #1E1E1E, #1E1E1E),
   //  linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
 
@@ -45,8 +46,7 @@ body {
 
 }
 .select-cards-payment:hover{
-  border: 1px solid orange;
-
+  box-shadow: 0 0 0 0.48px #FBDA61, 0 0 0 .81px rgba(255, 90, 205, 0.84);
 }
 
 .popup-container {
@@ -63,26 +63,44 @@ body {
 }
 
 .overlay-modal{
-  position: relative;
-  // background-color: #333;
-  display: flex;
-justify-content: center;
-align-items: center;
+position: relative;
+overflow-y: scroll;
 margin-left: auto;
 margin-right: auto;
-padding: 10px;
+padding: 15px;
 border: 1px solid #333;
 background: linear-gradient(0deg, #1E1E1E, #1E1E1E);
 width: 580px;
-height: 98vh;
+height: 90vh;
+bottom: 20px;
+border-radius: 20px;
+border: 1px;
+}
+.overlay-modal-sucess{
+@extend .overlay-modal;
+position:relative;
+width: 580px;
+height: 60vh;
 border-radius: 20px;
 border: 1px;
 
-
+}
+.overlay-modal-sucess-logo{
+  @extend .overlay-modal-sucess;
+  position: relative;
+  width: 550px;
+  height: 37vh;
 }
 /* Add other styling as needed */
 
-
+.modal-close{
+  // display: flex;
+  // justify-content: flex-end;
+  // margin-left: auto;
+width: 32px;
+height:32px;
+cursor: pointer;
+}
 .select-period{
 display: flex;
 justify-content: center;
@@ -124,7 +142,7 @@ border: 1px solid #333;
   height:24px;
   padding: 4px 6px 4px 6px;
   border-radius: 33px
-  
+
 }
 .plan-button-custom{
   @extend .plan-button;
@@ -149,16 +167,17 @@ border-radius: 5px;
   @extend .plan-mode1;
   background-image: linear-gradient(180deg, #0881FF 0%, #0B4F95 100%);
 
-  
+
   border: 1px solid #79BBFF;
-  
+
   }
+
+
   .plan-mode3{
     @extend .plan-mode1;
     background-image: linear-gradient(180deg, #068092 0%, #043B43 100%);
     border: 1px solid #22BFD6;
     }
-    
 
 .disc-text{
 color: #76F368;
@@ -186,6 +205,153 @@ font-size: 30px;
    margin: 15px 10px 0px 0px;
 
 }
+.credit-card{
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.credit-card-modes{
+  width: 124px;
+  height: 24px;
+  left: 416px;
+  gap:8px
+}
+.google-card{
+  width: 57px;
+  height: 24px;
+}
+.images-login-sucess{
+  @extend .images-login;
+  position: relative;
+  z-index: 1;
+}
+.images-modal{
+  @extend .images-login;
+  margin: 8px 0px 0px 0px;
+
+
+}
+.payment-brand{
+  width:70px;
+  height:32px
+}
+
+.plan-details {
+  width: 540px;
+height: 175px;
+margin: 1rem auto 3rem auto;
+border-radius: 10px;
+background-color: linear-gradient(0deg, #292929, #292929);
+border: 1px solid #414141;
+}
+
+.plan-details-mainhead{
+  width: 540px;
+  display: flex;
+  justify-content: space-between;
+height: 32px;
+top: 14px;;
+
+
+}
+.payment-plantext{
+width: 128px;
+height: 32px;
+flex-wrap: nowrap;
+white-space: nowrap;
+margin-left: 10px;
+font-size: 20px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+color: #fefefe;
+}
+.payment-plantext-details{
+  @extend .payment-plantext;
+  width: 142px;
+height: 30px;
+font-size: 18px;
+margin-bottom: 1rem;
+line-height: 30px;
+letter-spacing: 0em;
+}
+.payment-change{
+@extend .payment-plantext;
+flex-wrap: nowrap;
+width: 228px;
+margin-right: 10px;
+white-space: nowrap;
+text-align: right;
+color:#ffffff;
+}
+.paymentboxes{
+  width: 540px;
+  height: 48px;
+  padding: 8px, 499px, 16px, 0px;
+  margin-left: 0;
+  border-bottom: 1px solid #888888;
+  border: 0px, 0px, 1px, 0px;
+}
+
+.paymentboxescard{
+  @extend .paymentboxes;
+  border:0px;
+  height: 25px;
+}
+.payment-monthcvv{
+  @extend .paymentboxes;
+  width: 260px;
+}
+.carddiv{
+ height: 40px;
+ margin-bottom: 0.5rem;
+  border-bottom: 1px solid #888888;
+}
+.paymentboxes::placeholder {
+  width: 41px;
+  height: 24px;
+  top: 8px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #696969;
+
+
+}
+
+.payment-lists{
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+.list-select {
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid #292929;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+.list-select:hover{
+  @extend .list-select;
+  box-shadow: 0 0 0 0.6px #FBDA61, 0 0 0 .9px rgba(255, 90, 205, 0.84);
+
+}
+.list-select-checked{
+  @extend .list-select;
+  box-shadow: 0 0 0 0.6px #FBDA61, 0 0 0 .9px rgba(255, 90, 205, 0.84);
+}
+.line-pay{
+   border-top: 1px solid #414141;
+  width:540px;
+  height: 0;
+margin:20px 0;
+}
+
 .check-circle {
   position: relative;
   width: 21px; /* Adjust the size of the circle */
@@ -206,7 +372,15 @@ font-size: 30px;
   transform: translate(-50%, -50%);
 }
 
+.check-circle-opt{
+  @extend .check-circle;
+  content:'';
 
+}
+.check-circle-opt:checked + label::before {
+  background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
+
+}
 
 .banner-left{
   width: 100%;
@@ -324,25 +498,53 @@ input {
     display: block;
     width:390px;
     height: 1px;
-    background-color: #000; 
+    background-color: #000;
     transition: height 0.3s ease;
   }
 
- 
+
   input:focus::after {
-    height: 2px; 
+    height: 2px;
   }
   .login-button{
   background-color: #FDD649;
-  color: #000000; 
-  padding: 8px 16px 8px 16px; 
+  color: #000000;
+  padding: 8px 16px 8px 16px;
   font-size: 16px;
   height:40px;
   width:405px;
   border: none;
-  border-radius: 30px; 
-  cursor: pointer; 
+  border-radius: 30px;
+  cursor: pointer;
   outline: none;
+  }
+  .payment-process-sucess{
+    @extend .login-button;
+    width: 540px;
+    margin-bottom: 2rem;
+  }
+  .textColorYellow{
+    color:#FDD649;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+  }
+  .textColorBlue{
+@extend .textColorYellow;
+color: #91C3FD;
+  }
+  .sucess-button{
+  @extend .login-button;
+  width: 560px;
+  left: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 8px, 16px, 15px, 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  gap: 8px;
+
   }
   .payment-next{
     @extend .login-button;
@@ -369,11 +571,34 @@ input {
     border-radius: 30px;
     cursor: pointer;
     outline: none;
-border: 1px solid white
+    box-shadow: 0 0 0 0.34px #FBDA61, 0 0 0 .83px rgba(255, 90, 205, 0.84);
+
 
   }
+  .sucess-paid{
+    width: 540px;
+height: 45px;
+left: 20px;
+font-size: 30px;
+font-weight: 700;
+margin: 10px;
+// line-height: 45px;
+letter-spacing: 0em;
+text-align: center;
 
-  
+  }
+.sucess-message{
+  width: 540px;
+height: 24px;
+left: 20px;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
 
   /* Hide the default checkbox */
 input[type="checkbox"] {
@@ -415,4 +640,17 @@ input[type="checkbox"]:checked + label::after {
   transform: translate(-50%, -50%);
   font-size: 14px; /* Adjust the size of the tick */
   color: #333
+}
+
+.currstyles{
+  width: 28px;
+height: 20px;
+font-size: 14px;
+font-weight: 700;
+line-height: 20px;
+margin-right: 5px;
+letter-spacing: 0em;
+text-align: left;
+color: #B7B7B7;
+
 }

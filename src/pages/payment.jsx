@@ -2,14 +2,22 @@ import React,{useState} from 'react'
 import logo from "../assets/logo.png";
 import PaymentCards from '../common/paymentCards';
 import TopNavigation from '../common/topNavigate';
-import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../context/UserContext';
+
 
 const Payment=()=>{
  const [subscribe,setSubscribe]=useState(false);
+ const [sucess,setSucess]=useState(false);
+ const {updatePreference,preference}=useUserContext();
+
  const url = window.location.href;
 const paymentProps={
     subscribe,
-    setSubscribe
+    setSubscribe,
+    updatePreference,
+    preference,
+    setSucess,
+    sucess
 }
 return(<div className='container' >
     <div className='display flexRow' style={{padding:"2rem"}}>
@@ -25,9 +33,9 @@ return(<div className='container' >
     <div className='display justContCenter alignCenter'>
     <p>We will customize your experience based on your options</p>
     </div>
-  
+
         <div className="select-period">
-        <div className="monthly-plan">Monthly</div> 
+        <div className="monthly-plan">Monthly</div>
         <div className="anually-plan">Anually</div>
         <span className="discount-plan"><span className="disc-text">20%Off</span></span>
         </div>
@@ -39,7 +47,7 @@ return(<div className='container' >
     Privacy policy<span className='marginLeft12'>Terms</span>
    </div>
     </div>
-    
+
 
 </div>)
 }

@@ -19,6 +19,9 @@ display:flex
 .justContSpcBtwn{
     justify-content: space-between;
 }
+.justContSpcArnd{
+    justify-content: space-around;
+}
 
 .alignCenter{
     align-items: center;
@@ -46,7 +49,7 @@ display:flex
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(109.15deg, #FBDA61 0%, rgba(255, 90, 205, 0.84) 86.08%);
-    display: inline; 
+    display: inline;
 }
 .unsel-list{
     display: flex;

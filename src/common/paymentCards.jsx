@@ -2,12 +2,19 @@ import React,{useState} from 'react';
 import {payment_plans} from '../configs/signupstage';
 import { useNavigate } from 'react-router-dom';
 import Modal from './Modal';
-
+import featCircle from "../assets/icons/featurecircle.svg";
+import SuccessModal from './sucessModal';
 
 const PaymentCards=(props)=>{
  const navigate = useNavigate();
- const handleSubscription=()=>{
+ const handleSubscription=(data)=>{
   props.setSubscribe(!props.subscribe)
+  props.updatePreference(data);
+ }
+
+ const handleSucess=(st)=>{
+  props.setSubscribe(!props.subscribe)
+props.setSucess(st)
  }
  const handleClose=()=>{
   props.setSubscribe(!props.subscribe)
@@ -17,14 +24,14 @@ const PaymentCards=(props)=>{
       return(
       <div key={c.id} className='flexRow display'>
       <ul className='payment-list'>
-      <span className='check-circle'></span>
+      <img src={featCircle} alt="logo" className=""/>
       <li>{c.feature}</li>
       </ul>
       </div>
-      ) 
+      )
     })
     return c;
-   
+
   }
 return(<div className='justContCenter flexRow display margTop40'>
         {payment_plans.map((pym,index)=>{
@@ -37,10 +44,12 @@ return(<div className='justContCenter flexRow display margTop40'>
         </div>
         <span  className='plan-month'>Features:</span>
         <div className='justContStart flexCol display'>{planFeatures(pym.desc)}</div>
-        {pym.title.includes("$")?<button className='plan-button' onClick={handleSubscription}>Subscribe</button>:<button className='plan-button-custom' onClick={()=>{navigate("./create")}}><span style={{color:"#FEFEFE"}}>Contact Us</span></button>}
+        {pym.title.includes("$")?<button className='plan-button' onClick={()=>handleSubscription(pym)}>Subscribe</button>:<button className='plan-button-custom'><span style={{color:"#FEFEFE"}}>Contact Us</span></button>}
         </div>)
         })}
-         {props.subscribe&&<Modal onClose={handleClose}/>}
+         {props.subscribe&&<Modal onClose={handleClose} preference={props.preference} subscribe={props.subscribe} setSucess={handleSucess}/>}
+         {props.sucess&&<SuccessModal/>}
+
 </div>
 
 )

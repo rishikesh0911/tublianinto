@@ -37,11 +37,11 @@ const handleUserNames=(e)=>{
     return(<div className='container'>
     <div className='display'>
     <div className='width50 banner-create-account'>
-    <img src={d1} alt="user-prof" className="d1"/> 
+    <img src={d1} alt="user-prof" className="d1"/>
     <div className='display flexRow justContCenter alignCenter' style={{height:'80vh'}}>
-    <img src={Safari} alt="user-prof" className="user-profile"/> 
+    <img src={Safari} alt="user-prof" className="user-profile"/>
     </div>
-    <img src={d2} alt="user-prof" className="d2"/> 
+    <img src={d2} alt="user-prof" className="d2"/>
     </div>
     <div className='width50'  style={{padding:"2rem"}}>
     <div className='display flexRow'>
@@ -67,7 +67,7 @@ const handleUserNames=(e)=>{
      <div className='display flexRow'  style={{ flexWrap: 'wrap' }}>
        {loginCriteria.map((lc,index)=>{
     return(<div style={{width:'180px',height:'40px'}} className='display flexRow alignCenter marginBottom12' key={index}>
-   <img src={check} alt="check" className="signup-check"/> 
+   <img src={check} alt="check" className="signup-check"/>
    <h5 className='login-text-criteria'>{lc}</h5>
         </div>)
        })}
@@ -78,14 +78,14 @@ const handleUserNames=(e)=>{
     </div>
 
     <button className='google-sign flexRow display justContCenter alignCenter marginLeft12'><span> <img src={google} alt="google" className="google-logo"/> </span>Sign up with Google</button>
-    
+
     </div>
 
     <div className='display flexRow marginLeft12'>
-       <h4>Already have an account?</h4><a href="#" className='marginTop23 marginLeft12 highlight'>Login</a> 
+       <h4>Already have an account?</h4><a href="#" className='marginTop23 marginLeft12 highlight'>Login</a>
         </div>
         <Footer/>
-       
+
     </div>
 
     </div>

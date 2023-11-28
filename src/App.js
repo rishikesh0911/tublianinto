@@ -11,10 +11,10 @@ function App() {
     <Router>
     <UserDetailsProvider>
     <Routes>
-    <Route path="/login" element={<Login />} />
-    <Route path="login/create" element={<CreateAccount />} />
-    <Route path="login/create/setup" element={<AccountSetup />} />
-    <Route path="login/create/setup/payment" element={<Payment />} />
+    <Route path="/*" element={<Login />} />
+    <Route path="/create" element={<CreateAccount />} />
+    <Route path="/create/setup" element={<AccountSetup />} />
+    <Route path="/create/setup/payment" element={<Payment />} />
     </Routes>
     </UserDetailsProvider>
     </Router>

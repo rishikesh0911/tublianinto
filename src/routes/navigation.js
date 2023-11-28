@@ -6,7 +6,7 @@ const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/Login">Login</Link>
+          <Link to="/login">Login</Link>
         </li>
         <li>
           <Link to="/create">Create Account</Link>
@@ -16,6 +16,9 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/create/payment">Payment</Link>
+        </li>
+        <li>
+          <Link to="/create/payment/login">Login</Link>
         </li>
       </ul>
     </nav>
