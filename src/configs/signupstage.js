@@ -1,4 +1,4 @@
-export const snp=[{path:"login",stat:"1.Get Started"},{path:"create",stat:"2.Create Account"},{path:"setup",stat:"3.Account Setup"},{path:"payment",stat:"4.Payment"}]
+export const snp=[{path:"/",stat:"1.Get Started"},{path:"create",stat:"2.Create Account"},{path:"setup",stat:"3.Account Setup"},{path:"payment",stat:"4.Payment"}]
 export const loginCriteria=["8 Characters Minimum","One uppercase character","One symbol character"]
 
 export const account_options=[{id:23,img:"people1",title:'Team Projects',desc:'Hire developers for team projects',checked: false },

@@ -136,17 +136,25 @@ placeholder='Country'/>
 <button className='payment-process-sucess' onClick={()=>props.setSucess(true)}>Pay {title}</button>
 
 </div>
-<div className={props.subscribe?"footer-bottom":"footer-bottom-hide"}>
+{/* <div className={props.subscribe?"footer-bottom":"footer-bottom-hide"}>
   <div className='display flexRow justContStart' style={{width:'540px'}}>
-        {/* <div className='display flexRow justContCenter alignCenter'> */}
+       
 <img src={stripe1} alt="logo" className="payment-brand"/>
     <li className='marginLeft12 margTop10'>Powered by Stripe.com</li>
-   {/* </div> */}
+   
   </div>
 
-    </div>
+    </div> */}
+
+
 
   </div>
+  <div className='display flexRow justContStart' style={{width:'540px',position:"absolute",bottom:0}}>
+       
+       <img src={stripe1} alt="logo" className="payment-brand"/>
+           <li className='marginLeft12 margTop10'>Powered by Stripe.com</li>
+          
+         </div>
 
 </div>)
 }

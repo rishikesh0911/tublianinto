@@ -3,9 +3,6 @@ import logo from "../assets/logo.png";
 import AccountCards from '../common/accountCards';
 import TopNavigation from '../common/topNavigate';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../common/footer';
-import PaymentCards from '../common/paymentCards';
-
 
 const AccountSetup=()=>{
  const navigate = useNavigate();
@@ -28,10 +25,10 @@ return(<div className='container' >
     <div className='display justContCenter alignCenter marginTop23'>
      <AccountCards/>
     </div>
-    <div className='display justContCenter alignCenter marginTop23'>
+    <div className='display justContCenter alignCenter marginTop23 '>
     <button className='payment-next marginLeft12' onClick={()=>{navigate("./payment")}}>Proceed</button>
     </div>
-    <div className="footer-bottom">
+    <div className="footer-bottom marginBottom22">
         <div className='display flexRow justContCenter alignCenter'>
     Privacy policy<span className='marginLeft12'>Terms</span>
    </div>

@@ -24,7 +24,7 @@ props.setSucess(st)
       return(
       <div key={c.id} className='flexRow display'>
       <ul className='payment-list'>
-      <img src={featCircle} alt="logo" className=""/>
+      <img src={featCircle} alt="logo" style={{margin:'2px 5px 0px 0px'}}/>
       <li>{c.feature}</li>
       </ul>
       </div>

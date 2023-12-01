@@ -62,7 +62,7 @@ body {
 
 .overlay-modal{
 position: relative;
-overflow-y: scroll;
+overflow: hidden;
 margin-left: auto;
 margin-right: auto;
 padding: 15px;
@@ -74,6 +74,31 @@ bottom: 20px;
 border-radius: 20px;
 border: 1px;
 }
+
+.overlay-modal::-webkit-scrollbar {
+  width: 6px; 
+  padding-right: 1rem;
+
+}
+.overlay-modal:hover {
+  overflow-y: auto;
+  padding-right: 1rem;
+
+}
+
+
+.overlay-modal::-webkit-scrollbar-thumb {
+  background-color:  #1E1E1E;
+  border-radius: 3px; 
+  padding-right: 1rem;
+}
+
+.overlay-modal::-webkit-scrollbar-track {
+  background-color: #333; 
+  padding-right: 1rem;
+
+}
+
 .overlay-modal-sucess{
 @extend .overlay-modal;
 position:relative;
@@ -439,10 +464,12 @@ display: block;
   left:26px;
 }
 .footer-bottom {
-  position: fixed;
+  position:static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  background-color: #000;
   padding: 15px;
 }
 
